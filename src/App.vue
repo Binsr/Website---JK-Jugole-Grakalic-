@@ -43,7 +43,7 @@ body{
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 12vh auto 1fr 200px;
+  grid-template-rows: minmax(auto,100px) auto auto 200px;
   grid-template-areas:
       'header contact'
       'mainMenu mainMenu'
