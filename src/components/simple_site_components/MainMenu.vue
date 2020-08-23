@@ -50,7 +50,8 @@ export default {
 
 .main-menu__tabs-container{
   display: flex;
-  margin-top: auto;
+  margin: auto;
+  
 }
 .main-menu__tab{
   width: max-content;
@@ -74,6 +75,7 @@ export default {
 @media only screen and (max-width: 1280px) {
   .main-menu-container{
     flex-direction: column;
+    display: flex;
     height: 100%;
   }
   .main-menu__tabs-container{
@@ -83,7 +85,7 @@ export default {
     width: 100%;
   }
   .main-menu__tabs-container{
-    height: 100%;
+    
   }
 }
 

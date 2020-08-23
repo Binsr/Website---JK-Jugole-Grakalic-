@@ -33,12 +33,17 @@ body{
   padding: 0;
 }
 
+.contact-component{
+  display: flex;
+  width: 100%;
+}
+
 .app-container{
   overflow: scroll;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr 200px;
+  grid-template-rows: 12vh auto 1fr 200px;
   grid-template-areas:
       'header contact'
       'mainMenu mainMenu'
@@ -50,12 +55,12 @@ body{
 .main-menu-component{grid-area: mainMenu;}
 .page-component{grid-area: mainContent;}
 .footer-component{grid-area: footer;border-width: 3px 0 0 0;border-style: solid; border-color: gold;}
-
+.contact-component{grid-area: contact;}
 
 @media only screen and (max-width: 1280px) {
   .app-container{
     grid-template-columns: 200px auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: 12vh auto 60px auto;
     grid-template-areas:
                     'header header header' 
                     'mainMenu mainContent mainContent'

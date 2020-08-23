@@ -1,6 +1,7 @@
 <template>
   <div class='contact-container'>
-      <img style="width: 60px;margin: auto" src="@/assets/contactIcon.png">    
+      <img style="width: 60px;margin: auto" src="@/assets/contactIcon.png">
+      <img style="width: 60px;margin: auto;background-color: red" src="@/assets/doc.png">      
   </div>
 </template>
 
@@ -17,8 +18,9 @@ export default {
 
 .contact-container{
     background-color: blue;
-    height: 100%;
     display: flex;
+    height: 60px;
+    margin: auto;
 }
 
 </style>
