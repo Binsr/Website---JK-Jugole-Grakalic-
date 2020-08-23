@@ -44,7 +44,6 @@ export default {
 .main-menu-container{
   width: 100%;
   display: flex;
-  padding-top: 20px;
   background-color: black;
   justify-content: center;
 }

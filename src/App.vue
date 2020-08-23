@@ -1,6 +1,8 @@
 <template>
   <div  id="app">
     <div class="app-container">
+      <div class='header-component'> <Header> </Header> </div>
+      <div class='contact-component'> <Contact> </Contact> </div>
       <div class='main-menu-component'><MainMenu> </MainMenu></div>
       <div class='page-component'><router-view/></div>
       <div class='footer-component'> <Footer> </Footer> </div>
@@ -10,10 +12,12 @@
 <script>
 import MainMenu from './components/simple_site_components/MainMenu.vue'
 import Footer from './components/simple_site_components/Footer.vue'
+import Header from './components/simple_site_components/Header.vue'
+import Contact from './components/simple_site_components/Contact.vue'
 export default {
   name: 'App',
   components: {
-    MainMenu, Footer
+    MainMenu, Footer, Header, Contact
   }
 }
 </script>
@@ -34,24 +38,32 @@ body{
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 100px;
+  grid-template-rows: auto auto 1fr 200px;
   grid-template-areas:
-      'header'
-      'mainContent'
-      'footer';
+      'header contact'
+      'mainMenu mainMenu'
+      'mainContent mainContent'
+      'footer footer';
 }
-.main-menu-component{grid-area: header;}
+
+.header-component{grid-area: header;}
+.main-menu-component{grid-area: mainMenu;}
 .page-component{grid-area: mainContent;}
-.footer-component{grid-area: footer;}
+.footer-component{grid-area: footer;border-width: 3px 0 0 0;border-style: solid; border-color: gold;}
+
 
 @media only screen and (max-width: 1280px) {
   .app-container{
     grid-template-columns: 200px auto auto;
-    grid-template-rows: auto auto 100px;
-    grid-template-areas: 
-                    'header mainContent mainContent'
-                    'header mainContent mainContent'      
-                    'footer footer footer';
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+                    'header header header' 
+                    'mainMenu mainContent mainContent'
+                    'contact mainContent mainContent'      
+                    'footer mainContent mainContent';
+  }
+  .page-component{
+    overflow: scroll;
   }
 }
 
