@@ -1,6 +1,6 @@
 <template>
   <div class='footer-container'>
-      <div>wdad</div> 
+      <div class="footer-copyright">Copyright: VIZI.COM</div> 
   </div>
 </template>
 
@@ -15,9 +15,22 @@ export default {
 
 <style scoped>
 
-.footer-container{
-    background-color: black;
+
+.footer-copyright{
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: max-content;
+    line-height: 30px;
+    color:#dddddd;
 }
+
+@media only screen and (max-width: 1280px) {
+    .footer-copyright{
+        width: 100%;
+    }
+
+}
+
 
 </style>

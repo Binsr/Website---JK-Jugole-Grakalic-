@@ -1,7 +1,7 @@
 <template>
   <div class='contact-container'>
-      <img style="width: 60px;margin: auto" src="@/assets/contactIcon.png">
-      <img style="width: 60px;margin: auto;background-color: red" src="@/assets/doc.png">      
+      <img class="info-icons" src="@/assets/contactIcon.png">
+      <img class="info-icons" src="@/assets/doc.png">      
   </div>
 </template>
 
@@ -17,10 +17,21 @@ export default {
 <style scoped>
 
 .contact-container{
-    background-color: blue;
     display: flex;
     height: 60px;
     margin: auto;
+    width: 150px;
+}
+
+.info-icons{
+    width: 40px;
+    margin: auto auto;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    color: blue;
+}
+.info-icons:hover{
+    filter: invert(68%) sepia(132%) saturate(3207%) hue-rotate(160deg) brightness(95%) contrast(20%);
+
 }
 
 </style>

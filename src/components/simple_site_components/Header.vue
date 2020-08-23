@@ -1,7 +1,6 @@
 <template>
   <div class='header-container'>
-      <img src="@/assets/logo.png">    
-
+      <img class="logo-class" src="@/assets/logo.png">    
   </div>
 </template>
 
@@ -17,8 +16,12 @@ export default {
 <style scoped>
 
 .header-container{
-    background-color: green;
-    height: 100%;
+
+    height: max-content;
+}
+.logo-class{
+    max-height: min-content;
+    margin: 20px 0 0 20px;
 }
 
 </style>
