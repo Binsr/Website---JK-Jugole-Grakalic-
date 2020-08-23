@@ -31,7 +31,19 @@ export default {
 }
 .info-icons:hover{
     filter: invert(68%) sepia(132%) saturate(3207%) hue-rotate(160deg) brightness(95%) contrast(20%);
+}
+
+@media only screen and (max-width: 1150px) {
 
 }
+
+@media only screen and (max-width: 900px) {
+    .contact-container{
+        flex-direction: column;
+        width: max-content;
+        height: 140px;
+    }
+}
+
 
 </style>

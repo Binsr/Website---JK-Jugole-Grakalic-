@@ -25,9 +25,14 @@ export default {
     color:#dddddd;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 900px) {
     .footer-copyright{
         width: 100%;
+        text-align: right;
     }
 
 }

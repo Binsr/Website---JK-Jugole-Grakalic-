@@ -6,6 +6,7 @@
       <div class='main-menu-component'><MainMenu> </MainMenu></div>
       <div class='page-component'><router-view/></div>
       <div class='footer-component'> <Footer> </Footer> </div>
+      <img src="@/assets/hamburgerMenu.png" class='hamburgerButton'>
     </div>
   </div>
 </template>
@@ -39,8 +40,18 @@ body{
   width: 100%;
 }
 
+.hamburgerButton{
+  display: none;
+  width: 50px;
+  right: 0;
+  top: 0;
+  margin: 10px 10px 0 0;
+  position: fixed;
+}
+
 .app-container{
   background-image: url('./assets/background.jpg');
+  background-size: cover;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -63,20 +74,49 @@ body{
   overflow: scroll;
   overflow-x: hidden;
 }
-
-
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
   .app-container{
-    grid-template-columns: 200px auto 20vw;
-    grid-template-rows: max-content auto 60px auto;
+    grid-template-columns: max-content auto auto;
+    grid-template-rows: max-content auto auto 30px;
     grid-template-areas:
-                    'header header footer' 
+                    'header header contact' 
                     'mainMenu mainContent mainContent'
-                    'contact mainContent mainContent'      
-                    'contact mainContent mainContent';
+                    'mainMenu mainContent mainContent'
+                    'footer footer footer'
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  .app-container{
+    grid-template-columns: max-content auto auto;
+    grid-template-rows: max-content auto 30px;
+    grid-template-areas:
+                    'header header header' 
+                    'mainContent mainContent mainContent'
+                    'footer footer footer'
+  }
+  .contact-component{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+    width: max-content;
+    
+  }
+  .main-menu-component{
+    position: fixed;
+    margin-top: 20vh;
+    left: -330px;
+    margin-left: 10px;
+    width: max-content;
   }
   .page-component{
     overflow: scroll;
+    overflow-x: hidden;
+  }
+  .hamburgerButton{
+    display: unset;
   }
   
 }

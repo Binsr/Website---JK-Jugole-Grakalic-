@@ -2,7 +2,7 @@
   <div class="main-menu-container">
     <div class="main-menu__tabs-container">
         <div class="main-menu__tab">
-            <router-link to="/"><span class="main-menu-text">Početna</span></router-link>
+            <router-link to="/"><span class="main-menu-text">POCETNA</span></router-link>
         </div>
         <div class="main-menu__tab"> 
             <router-link to="/news"><span class="main-menu-text">NOVOSTI</span></router-link>
@@ -94,7 +94,10 @@ export default {
   opacity: 0.9;
 }
 
-@media only screen and (max-width: 1280px) {
+
+
+@media only screen and (max-width: 1200px) {
+
   .main-menu-container{
     flex-direction: column;
     display: flex;
@@ -102,6 +105,7 @@ export default {
   }
   .main-menu__tabs-container{
     flex-direction: column;
+    margin-top: 50px;
   }
   .main-menu__tab{
     width: 100%;
@@ -114,7 +118,6 @@ export default {
   }
   .main-menu__tabs-container{
     display: flex;
-    margin: auto;
     border-width: 0 0 0 0;
   }
 
