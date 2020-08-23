@@ -45,7 +45,7 @@ export default {
   width: 100%;
   display: flex;
   padding-top: 20px;
-  background-color: green;
+  background-color: black;
   justify-content: center;
 }
 
@@ -55,21 +55,38 @@ export default {
 }
 .main-menu__tab{
   width: max-content;
-  padding: 10px;
-  height: 30px;
+  box-sizing: border-box;
   background-color: black;
 }
 
 .main-menu__tab a{
-  width: 100%;
-  height: 100%;
-  display: block;
+  justify-content: center;
+  display: flex;
+  margin: auto;
   text-align: center;
-  line-height: 30px;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .main-menu__tab:hover{
   background-color: aqua;
 }
+
+@media only screen and (max-width: 1280px) {
+  .main-menu-container{
+    flex-direction: column;
+    height: 100%;
+  }
+  .main-menu__tabs-container{
+    flex-direction: column;
+  }
+  .main-menu__tab{
+    width: 100%;
+  }
+  .main-menu__tabs-container{
+    height: 100%;
+  }
+}
+
 
 </style>
