@@ -102,6 +102,7 @@ export default {
     flex-direction: column;
     display: flex;
     height: 100%;
+    width: min-content;
   }
   .main-menu__tabs-container{
     flex-direction: column;

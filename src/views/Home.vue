@@ -1,6 +1,6 @@
 <template>
-  <div style="height: 1000px"> 
-    Home page
+  <div style="height: 1000px;"> 
+    Home pageawdwadwadwadawdwadwada
   </div>
 </template>
 
