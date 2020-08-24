@@ -1,14 +1,21 @@
 <template>
   <div style="height: 1000px"> 
-    Home page
+    <SlideShow> </SlideShow>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
+import SlideShow from '@/components/simple_site_components/SlideShow.vue'
 export default {
   name: 'Home',
-  components: {}
+  components: {
+    SlideShow
+  }
 }
 </script>
+
+<style scoped>
+
+
+</style>
