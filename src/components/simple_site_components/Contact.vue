@@ -1,7 +1,8 @@
 <template>
   <div class='contact-container'>
-      <img style="width: 60px;margin: auto" src="@/assets/contactIcon.png">
-      <img style="width: 60px;margin: auto;background-color: red" src="@/assets/doc.png">      
+      <img class="info-icons" src="@/assets/contactIcon.png">
+      <img class="info-icons" src="@/assets/doc.png"> 
+      <img class="menu-button" src="@/assets/doc.png">     
   </div>
 </template>
 
@@ -17,10 +18,49 @@ export default {
 <style scoped>
 
 .contact-container{
-    background-color: blue;
     display: flex;
     height: 60px;
     margin: auto;
+    width: 120px;
 }
+
+.menu-button{
+    width: 0;
+}
+
+.info-icons{
+    width: 40px;
+    margin: auto auto;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    color: white;
+}
+.info-icons:hover{
+    filter: invert(68%) sepia(132%) saturate(3207%) hue-rotate(160deg) brightness(95%) contrast(20%);
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-container{
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .contact-container{
+        width: 170px;
+    }
+    .info-icons{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .menu-button{
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        margin-left: 10px;
+        filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+        color: white;
+    }
+}
+
 
 </style>
