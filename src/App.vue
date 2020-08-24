@@ -24,7 +24,9 @@ export default {
 
 <style>
 #app{
-    background-image: url('./assets/background.jpg');
+    /* background-image: url('./assets/background.jpg'); */
+    background-size: cover;
+    background-color: black
 }
 html{
   padding: 0;
@@ -41,19 +43,20 @@ body{
 }
 
 .page-container{
-  width: 80vw;
+  width: 100vw;
   margin:0 auto;
-  background-color: black;
+  background-color: transparent;
   color: white;
 }
 
 .page-component{
-  padding-top: 180px;
+
   width:100vw;
   z-index: -1;
 }
 
 .app-container{
+  background-color: #c1b189c4;
   position: absolute;
   width: 100%;
   height: auto;
@@ -84,6 +87,7 @@ body{
   }
   .main-menu-component{margin-left: unset;}
   .app-container{
+    background-color: unset;
     width: auto;
     grid-template-columns: max-content auto auto;
     grid-template-rows: max-content;

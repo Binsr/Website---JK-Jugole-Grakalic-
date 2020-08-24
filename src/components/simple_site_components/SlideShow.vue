@@ -1,14 +1,12 @@
 <template>
   <div class='slideshow-container'>
-    <transition-group name="fade" tag="id">
-      <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg"/>
+    <div class="wrap-slide-components">
+      <!-- <a class="prev" @click="prev" href="#"> &#10094; Previous </a> -->
+      <div class="image-container" v-for="i in [currentIndex]" :key="i">
+        <img class="slider-image" :src="currentImg"/>
       </div>
-    </transition-group>
-
-    <a class="prev" @click="prev" href="#"> &#10094; Previous </a>
-    <a class="next" @click="next" href="#"> &#10095; Next </a>
-
+      <!-- <a class="next" @click="next" href="#">Next &#10095; </a> -->
+    </div>
   </div>
 </template>
 
@@ -20,9 +18,8 @@ export default {
   data(){
     return{
       images: [
-        "@/assets/home-slideshow/slide01.jpg",
-        "@/assets/home-slideshow/slide02.jpg",
-        "@/assets/home-slideshow/slide03.jpg"
+        "http://virtualmontenegro.com/jugolegrakalic/public_images/homeSlide01.jpg",
+        "http://virtualmontenegro.com/jugolegrakalic/public_images/homeSlide02.jpeg"
       ],
       timer: null,
       currentIndex: 0
@@ -35,15 +32,22 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
+      this.timer = setInterval(this.next, 5000);
     },
 
     next: function() {
       this.currentIndex += 1;
+      this.timer.reset();
+      this.timer = setInterval(this.next, 5000);
     },
 
     prev: function() {
       this.currentIndex -= 1;
+      if(this.currentIndex < 0)
+        this.currentIndex = this.images.length()-1; 
+
+      this.timer.reset();
+      this.timer = setInterval(this.next, 5000);
     }
   },
   computed: {
@@ -56,14 +60,22 @@ export default {
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.9s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width:100%;
-  opacity: 1;
+
+
+.slideshow-container{
+  width: min-content;
+  display: flex;
+  min-width: 100vw;
+  min-height: 700px;
+}
+
+.wrap-slide-components{
+  display: flex;
+}
+
+.image-container{
+  width: 100vw;
+  height: 50vh;
 }
 
 .fade-enter,
@@ -74,17 +86,21 @@ export default {
 }
 
 
-img {
-  height:600px;
-  width:100%
+.slider-image{
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+.arrows-container{
+  display: flex;
+  margin: 0 auto;
+  margin-top: auto;
 }
 
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
+  width: max-content;
   padding: 16px;
+  margin:auto;
   color: white;
   font-weight: bold;
   font-size: 18px;

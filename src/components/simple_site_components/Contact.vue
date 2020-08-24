@@ -31,8 +31,8 @@ export default {
 .info-icons{
     width: 40px;
     margin: auto auto;
-    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
-    color: white;
+     background-blend-mode: multiply;
+
 }
 .info-icons:hover{
     filter: invert(68%) sepia(132%) saturate(3207%) hue-rotate(160deg) brightness(95%) contrast(20%);

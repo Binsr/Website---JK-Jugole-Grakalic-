@@ -13,11 +13,11 @@
         <div class="main-menu__tab"> 
             <router-link to="/klase"><span class="main-menu-text" >KLASE</span></router-link>
         </div>
-        <div class="main-menu__tab"> 
+        <!-- <div class="main-menu__tab"> 
             <router-link to="/foto-arhiv"><span class="main-menu-text" >FOTO ARHIV</span></router-link>
-        </div>
+        </div> -->
         <div class="main-menu__tab"> 
-            <router-link to="/fotografije"><span class="main-menu-text">FOTOGRAFIJE</span></router-link>
+            <router-link to="/fotografije"><span class="main-menu-text">GALERIJA</span></router-link>
         </div>
         <div class="main-menu__tab"> 
             <router-link to="/plan-uredjenja-skvera"><span class="main-menu-text">PLAN UREDJENJA SKVERA</span></router-link>
@@ -82,7 +82,7 @@ export default {
 }
 
 .router-link-active{
-  border-color: #1d93fb !important;
+  border-color: #2e60d5  !important;
   border-width: 0 0 2px 0 !important;
   border-style: solid;
 }

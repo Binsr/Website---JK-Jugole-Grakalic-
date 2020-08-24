@@ -1,6 +1,7 @@
 <template>
-  <div style="height: 1000px"> 
+  <div> 
     <SlideShow> </SlideShow>
+    <div style="width: 100%; height: 600px;background-color: #777;"></div>
   </div>
 </template>
 
