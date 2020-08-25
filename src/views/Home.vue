@@ -1,17 +1,22 @@
 <template>
   <div> 
     <SlideShow> </SlideShow>
-    <div style="width: 100%; height: 600px;background-color: #777;"></div>
+    <HomeOKlubu> </HomeOKlubu>
+    <HomeSkola> </HomeSkola>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import SlideShow from '@/components/simple_site_components/SlideShow.vue'
+import HomeOKlubu from '@/components/simple_site_components/HomeOKlubu.vue'
+import HomeSkola from '@/components/simple_site_components/HomeSkola.vue'
 export default {
   name: 'Home',
   components: {
-    SlideShow
+    SlideShow,
+    HomeOKlubu,
+    HomeSkola
   }
 }
 </script>
