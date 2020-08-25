@@ -1,5 +1,7 @@
 <template>
-  <div  id="app">
+  <div style="display:flex;flex-direction:column" id="app">
+  <img style="margin: 0 auto" src="@/assets/bitBunny.jpg"><div style="margin:30px auto;display:flex"><h1 style="color:white;margin: 0 auto;">SAJT U IZRADI</h1></div>
+  <div style="display:none">
     <div class="app-container">
       <div class='header-component'> <Header> </Header> </div>
       <div class='contact-component'> <Contact> </Contact> </div>
@@ -7,6 +9,7 @@
       <!-- <div class='footer-component'> <Footer> </Footer> </div> -->
     </div>
     <div class='page-component'><div class="page-container"><router-view/></div> </div>
+  </div>
   </div>
 </template>
 <script>
