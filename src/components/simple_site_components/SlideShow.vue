@@ -37,7 +37,6 @@ export default {
 
     next: function() {
       this.currentIndex += 1;
-      this.timer.reset();
       this.timer = setInterval(this.next, 5000);
     },
 
@@ -46,7 +45,6 @@ export default {
       if(this.currentIndex < 0)
         this.currentIndex = this.images.length()-1; 
 
-      this.timer.reset();
       this.timer = setInterval(this.next, 5000);
     }
   },
