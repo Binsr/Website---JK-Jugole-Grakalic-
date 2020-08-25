@@ -26,7 +26,7 @@ export default {
 #app{
     /* background-image: url('./assets/background.jpg'); */
     background-size: cover;
-
+    background-color: whitesmoke
 }
 html{
   padding: 0;

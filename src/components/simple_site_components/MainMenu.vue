@@ -111,9 +111,7 @@ export default {
   .main-menu__tab{
     width: 100%;
   }
-  .main-menu__tabs-container{
-    
-  }
+
   .main-menu__tab a{
     border-color: transparent;
   }
