@@ -15,14 +15,6 @@ export default {
     props: ['order'],
     name: 'HomeOKlubu',
     components: {},
-    // data(){
-    //     return{
-    //         order:'image-text-container' //1. text-image-container 
-    //                                     //2. image-text-container samo se zamene ta 2
-    //                                     //Treba proslediti kao argument jedno od ta dva sliku i tekstove i da se koristi dinamicki ova komponenta
-        
-    //     }
-    // }
     methods: {
         setOrder: function() {
             if(this.order.direction == 'img-text'){
@@ -31,8 +23,7 @@ export default {
                 return 'text-image-container';
             }
         }
-    }
-    
+    }  
 }
 </script>
 
