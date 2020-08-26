@@ -1,7 +1,8 @@
 <template>
   <div> 
     <SlideShow> </SlideShow>
-    <HomeOKlubu> </HomeOKlubu>
+    <HomeOKlubu :order="secData[0]"> </HomeOKlubu> 
+    <HomeOKlubu :order="secData[1]"> </HomeOKlubu>
     <HomeSkola> </HomeSkola>
   </div>
 </template>
@@ -17,6 +18,21 @@ export default {
     SlideShow,
     HomeOKlubu,
     HomeSkola
+  },
+  data(){
+    return { 
+      secData: [{
+                direction : 'img-text',
+                imageLink : 'TREBA DODATI LINK SLIKE',
+                title : "TITLE KOJI HOCES DA SE POJAVI",
+                text : "TEKST KOJI HOCES DA SE POJAVI"
+                
+               },{direction : 'text-img',   //definise da li ide slika levo ili desno u odnosu na tekst
+                  imageLink : "ISTO NEKA DRUGA",
+                  title : "ISTO NEKI",
+                  text : "ISTO NEKI"
+               }] 
+    }
   }
 }
 </script>
